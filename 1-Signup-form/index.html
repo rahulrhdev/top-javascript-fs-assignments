@@ -11,12 +11,15 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Sign Up</title>
+    <script src="index.js" defer></script>
   </head>
   <body>
     <section class="container">
       <div class="side-img">
+        <div class="logo-container">
         <img src="./logo.png" alt="logo" />
         <span id="logo">Odin</span>
+      </div>
       </div>
       <div class="side-form">
         <div class="upper-para">
@@ -31,22 +34,30 @@
           <p>Lorem ipsum <em>dolor</em> sit amet.</p>
         </div>
         <div class="form-container">
-          <form action="">
+          <h4>Let's do this!</h4>
+          <form action="/1-Signup-form" method="get" novalidate id="form">
+            
             <ul class="form-elements">
               <li>
                 <label for="firstName">First Name:</label>
                 <br />
-                <input type="text" name="firstName" id="firstName" />
+                <input type="text" name="firstName" id="firstName" required/>
+                <br>
+                <span class="optional-error-false-required" id="fn">Required</span>
               </li>
               <li>
                 <label for="lastName">Last Name:</label>
                 <br />
-                <input type="text" name="lastName" id="lastName" />
+                <input type="text" name="lastName" id="lastName" required />
+                <br>
+                <span class="optional-error-false-required" id="ln">Required</span>
               </li>
               <li>
                 <label for="email">Email:</label>
                 <br />
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" id="email" required />
+                <br>
+                <span class="optional-error-false-required" id="er">Required</span>
               </li>
               <li>
                 <label for="phNo">Phone Number:</label>
@@ -56,17 +67,26 @@
               <li>
                 <label for="password">Password:</label>
                 <br />
-                <input type="password" name="password" id="password" />
+                <input type="password" name="password" id="password" required/>
+                <br>
+                <span class="optional-error-false-required" id="pr">Required</span>
               </li>
               <li>
                 <label for="confirmPassword">Confirm Password:</label>
                 <br />
-                <input type="text" name="confirmPassword" id="confirmPassword" />
+                <input type="password" name="confirmPassword" id="confirmPassword" required/>
+                <br>
+                <span class="optional-error-false" id="optional">Passwords dont match</span>
+                <br>
+                <span class="optional-error-false-required" id="cpr">Required</span>
               </li>
             </ul>
+            <input type="submit" value="Create an Account" class="submitBtn">
           </form>
+          <p class="btmText">Already have an account? <a href="/1-Signup-form/index.html"><span class="login">Log in</span></a></p>
         </div>
       </div>
     </section>
   </body>
+  </script>
 </html>
